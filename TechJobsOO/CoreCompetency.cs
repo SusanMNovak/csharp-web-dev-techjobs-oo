@@ -35,6 +35,11 @@ namespace TechJobsOO
         {
             return Value;
         }
+
+        public static implicit operator CoreCompetency(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
     
 }

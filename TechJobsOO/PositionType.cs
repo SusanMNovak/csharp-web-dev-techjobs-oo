@@ -36,5 +36,10 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id, Value);
         }
+
+        public static implicit operator PositionType(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

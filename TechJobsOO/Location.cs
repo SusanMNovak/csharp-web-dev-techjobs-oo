@@ -35,5 +35,10 @@ namespace TechJobsOO
         {
             return Value;
         }
+
+        public static implicit operator Location(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

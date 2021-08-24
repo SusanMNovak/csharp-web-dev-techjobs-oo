@@ -1,4 +1,5 @@
-﻿using TechJobsOO;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TechJobsOO;
 
 namespace TechJobsTests
 {
@@ -24,6 +25,27 @@ namespace TechJobsTests
             Assert.IsTrue(job1.Id != job2.Id && (job1.Id + 1) == job2.Id);
         }
 
+        class ClassToTest
+        {
+            public int Id;
+            public string Name;
+            public Employer EmployerName; 
+            public Location EmployerLocation;
+            public PositionType JobType; 
+            public CoreCompetency JobCoreCompetency;
+            private int nextId;
 
+            public ClassToTest(int Id, string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
+            {
+                Id = nextId;
+                Name = "Product tester";
+                EmployerName = "ACME";                   ''
+                EmployerLocation = "Desert";
+                JobType = "Quality control";
+                JobCoreCompetency = "Persistence";
+            }
+        }
+
+        //TEST FULL CONSTRUCTOR Use Assert statements to test that the constructor correctly assigns the value of each field
     }
 }
