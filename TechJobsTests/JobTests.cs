@@ -23,7 +23,7 @@ namespace TechJobsTests
         [TestMethod]
         public void TestSettingJobId()
         {
-            Assert.IsTrue(job1.Id != job2.Id);
+            Assert.IsTrue(job1.Id != job3.Id);
         }
 
         //TEST FULL CONSTRUCTOR Use Assert statements to test that the constructor correctly assigns the value of each field
@@ -32,12 +32,16 @@ namespace TechJobsTests
         {
             Assert.IsTrue("Product tester" == job3.Name);
             Assert.IsTrue("ACME" == job3.EmployerName.Value);
-            Assert.IsTrue("Desert" == job3.Location.Value);
-            Assert.IsTrue("Quality control" == job3.PositionType.Value);
-            Assert.IsTrue("Persistence" == job3.CoreCompetency.Value);
+            Assert.IsTrue("Desert" == job3.EmployerLocation.Value);
+            Assert.IsTrue("Quality control" == job3.JobType.Value);
+            Assert.IsTrue("Persistence" == job3.JobCoreCompetency.Value);
         }
 
-
+        [TestMethod]
+        public void TestJobsForEquality() 
+        {
+        
+        }
 
     }
 
