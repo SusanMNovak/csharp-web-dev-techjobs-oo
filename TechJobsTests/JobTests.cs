@@ -40,20 +40,24 @@ namespace TechJobsTests
         [TestMethod]
         public void TestJobsForEquality() 
         {
-            Assert.IsTrue(job4.Id == job3.Id);
+            Assert.IsFalse(job3.Equals(job4));
+            /*Assert.IsTrue(job4.Id == job3.Id);
             Assert.IsTrue(job4.Name == job3.Name);
             Assert.IsTrue(job4.EmployerName.Value == job3.EmployerName.Value);
             Assert.IsTrue(job4.EmployerLocation.Value == job3.EmployerLocation.Value);
             Assert.IsTrue(job4.JobType.Value == job3.JobType.Value);
-            Assert.IsTrue(job4.JobCoreCompetency.Value == job3.JobCoreCompetency.Value);
+            Assert.IsTrue(job4.JobCoreCompetency.Value == job3.JobCoreCompetency.Value);*/
         }
         //Use TDD to Build The ToString() Method
         [TestMethod]
         public void TestToString()
         {
-            Assert.IsTrue(jobi.IobCoreCompetency.Value"");
-            Assert.IsTrue("Name: " + jobi.Name + \n + "Employer: " + jobi.EmployerName.Value + \n + "Location: " + "jobi.EmployerLocation.Value" + \n + " Position Type: " jobi.JobType.Value + \n + "Core Competency: " + "jobi.JobCoreCompetency.Value" + \n;)
-        }   Assert.IsNullOrEmpty(Job);
+            string output = " ID: " + job3.Id + "\n Name: " + job3.Name + "\n Employer: " + job3.EmployerName.Value + "\nLocation: " + job3.EmployerLocation.Value + "\n Position Type: " + job3.JobType.Value + "\n Core Competency: " + job3.JobCoreCompetency.Value + "\n";
+            
+            Assert.AreEqual(output, job3.ToString());
+            //Assert.IsTrue(job3.IobCoreCompetency.Value"");
+            //Assert.IsTrue("Name: " + jobi.Name + \n + "Employer: " + jobi.EmployerName.Value + \n + "Location: " + "jobi.EmployerLocation.Value" + \n + " Position Type: " jobi.JobType.Value + \n + "Core Competency: " + "jobi.JobCoreCompetency.Value" + \n;)
+        }   //Assert.IsNullOrEmpty(Job);
 
     }
 

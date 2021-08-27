@@ -37,12 +37,12 @@ namespace TechJobsOO
         public override bool Equals(object obj)
         {
             return obj is Job job &&
-                   Id == job.Id &&
-                   Name == job.Name &&
+                   Id == job.Id;
+                   /*Name == job.Name &&
                    EqualityComparer<Employer>.Default.Equals(EmployerName, job.EmployerName) &&
                    EqualityComparer<Location>.Default.Equals(EmployerLocation, job.EmployerLocation) &&
                    EqualityComparer<PositionType>.Default.Equals(JobType, job.JobType) &&
-                   EqualityComparer<CoreCompetency>.Default.Equals(JobCoreCompetency, job.JobCoreCompetency);
+                   EqualityComparer<CoreCompetency>.Default.Equals(JobCoreCompetency, job.JobCoreCompetency);*/
         }
 
         public override int GetHashCode()
@@ -52,11 +52,18 @@ namespace TechJobsOO
         // Print using ToString
         public override string ToString()
         { 
-            foreach (int i in Job)
+            if (Name == "")
             {
-                return " ID: i + "Name: " + jobi.Name + \n + "Employer: " + jobi.EmployerName.Value + \n + "Location: " + "jobi.EmployerLocation.Value" + \n + " Position Type: " jobi.JobType.Value + \n + "Core Competency: " +  "jobi.JobCoreCompetency.Value" + \n;
-
-                Console.WriteLine(Job.ToString());
+                Name = "Data not available.";
+                
+            }
+            if (EmployerName.Value == "" || EmployerName.Value == null)
+                EmployerName = "Data not available.";
+            
+            {
+                string output =  "\n ID: " + Id + "\n Name: " + Name + "\n Employer: " + EmployerName.Value + "\nLocation: " + EmployerLocation.Value + "\n Position Type: "   + JobType.Value  + "\n Core Competency: " +  JobCoreCompetency.Value + "\n";
+                return output;
+                //Console.WriteLine(Job.ToString());
             }
         }
    
