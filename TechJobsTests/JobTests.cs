@@ -52,8 +52,8 @@ namespace TechJobsTests
         public void TestToString()
         {
             Assert.IsTrue(jobi.IobCoreCompetency.Value"");
-            Assert.IsTrue
-        }
+            Assert.IsTrue("Name: " + jobi.Name + \n + "Employer: " + jobi.EmployerName.Value + \n + "Location: " + "jobi.EmployerLocation.Value" + \n + " Position Type: " jobi.JobType.Value + \n + "Core Competency: " + "jobi.JobCoreCompetency.Value" + \n;)
+        }   Assert.IsNullOrEmpty(Job);
 
     }
 
