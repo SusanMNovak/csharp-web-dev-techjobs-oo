@@ -33,7 +33,8 @@ namespace TechJobsOO
             Job.nextId++;
         }
 
-           public override bool Equals(object obj)
+        // Generate Equals() and GetHashCode() methods.
+        public override bool Equals(object obj)
         {
             return obj is Job job &&
                    Id == job.Id &&
@@ -48,6 +49,16 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
         }
-        // TODO: Generate Equals() and GetHashCode() methods.
+        // Print using ToString
+        public override string ToString()
+        { 
+            foreach (int i in Job)
+            {
+                return " ID: i + "Name: " + jobi.Name + \n + "Employer: " + jobi.EmployerName.Value + \n + "Location: " + "jobi.EmployerLocation.Value" + \n + " Position Type: " jobi.JobType.Value + \n + "Core Competency: " +  "jobi.JobCoreCompetency.Value" + \n;
+
+                Console.WriteLine(Job.ToString());
+            }
+        }
+   
     }
 }

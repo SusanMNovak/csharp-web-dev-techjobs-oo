@@ -40,7 +40,18 @@ namespace TechJobsTests
         [TestMethod]
         public void TestJobsForEquality() 
         {
-        
+            Assert.IsTrue(job4.Id == job3.Id);
+            Assert.IsTrue(job4.Name == job3.Name);
+            Assert.IsTrue(job4.EmployerName.Value == job3.EmployerName.Value);
+            Assert.IsTrue(job4.EmployerLocation.Value == job3.EmployerLocation.Value);
+            Assert.IsTrue(job4.JobType.Value == job3.JobType.Value);
+            Assert.IsTrue(job4.JobCoreCompetency.Value == job3.JobCoreCompetency.Value);
+        }
+        //Use TDD to Build The ToString() Method
+        [TestMethod]
+        public void TestToString()
+        {
+            Assert.IsTrue(TestSettingJobId().IobCoreCompetency.Nalue"");
         }
 
     }
