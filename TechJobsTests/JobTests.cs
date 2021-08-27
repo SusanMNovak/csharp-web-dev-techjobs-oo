@@ -51,7 +51,8 @@ namespace TechJobsTests
         [TestMethod]
         public void TestToString()
         {
-            Assert.IsTrue(TestSettingJobId().IobCoreCompetency.Nalue"");
+            Assert.IsTrue(jobi.IobCoreCompetency.Value"");
+            Assert.IsTrue
         }
 
     }
