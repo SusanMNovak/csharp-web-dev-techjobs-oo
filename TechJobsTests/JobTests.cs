@@ -53,9 +53,9 @@ namespace TechJobsTests
         public void TestToString()
         {
             string output = " ID: " + job3.Id + "\n Name: " + job3.Name + "\n Employer: " + job3.EmployerName.Value + "\nLocation: " + job3.EmployerLocation.Value + "\n Position Type: " + job3.JobType.Value + "\n Core Competency: " + job3.JobCoreCompetency.Value + "\n";
-            
+            Assert.IsTrue(output.EndsWith("\n"));
             Assert.AreEqual(output, job3.ToString());
-            //Assert.IsTrue(job3.IobCoreCompetency.Value"");
+            Assert.IsTrue(output.CoreCompetency.Value == "Data not available.");
             //Assert.IsTrue("Name: " + jobi.Name + \n + "Employer: " + jobi.EmployerName.Value + \n + "Location: " + "jobi.EmployerLocation.Value" + \n + " Position Type: " jobi.JobType.Value + \n + "Core Competency: " + "jobi.JobCoreCompetency.Value" + \n;)
         }   //Assert.IsNullOrEmpty(Job);
 
