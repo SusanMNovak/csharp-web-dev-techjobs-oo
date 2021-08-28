@@ -55,7 +55,7 @@ namespace TechJobsTests
         [TestMethod]
         public void TestToString()
         {
-            string output = "\n ID: " + job5.Id + "\n Name: " + job5.Name + "\n Employer: " + job5.EmployerName.Value + "\nLocation: " + job5.EmployerLocation.Value + "\n Position Type: " + job5.JobType.Value + "\n Core Competency: " + job5.JobCoreCompetency.Value + "\n";
+            string output = "\n ID: " + job5.Id + "\n Name: " + job5.Name + "\n Employer: " + job5.EmployerName.Value + "\nLocation: " + job5.EmployerLocation.Value + "\n Position Type: " + job5.JobType.Value + "\n Core Competency: " + "Data not available." + "\n";
             Assert.IsTrue(output.EndsWith("\n"));
             Assert.AreEqual(output, job5.ToString());
             Assert.IsTrue(job5.JobCoreCompetency.Value == "Data not available.");
