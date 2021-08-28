@@ -73,7 +73,7 @@ namespace TechJobsOO
                 JobType.Value = "Data not available.";
             }
 
-            if(JobCoreCompetency.Value == "" || JobCoreCompetency.Value == null);
+            if(JobCoreCompetency.Value == "" || JobCoreCompetency.Value == null)
             {
                 JobCoreCompetency.Value = "Data not available.";
             }
