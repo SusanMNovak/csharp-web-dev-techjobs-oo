@@ -6,7 +6,7 @@ namespace TechJobsOO
     public class Job
     {
         public int Id { get; }
-        private static int nextId = 1;
+        static private int nextId = 1;
 
         public string Name { get; set; }
         public Employer EmployerName { get; set; }
@@ -49,6 +49,7 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
         }
+
         // Print using ToString
         public override string ToString()
         { 

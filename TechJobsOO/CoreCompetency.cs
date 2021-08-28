@@ -1,7 +1,13 @@
 ﻿using System;
 namespace TechJobsOO
 {
-    public class CoreCompetency
+    public class CoreCompetency : JobField
+    {
+        public CoreCompetency(string value) : base(value) { }
+    }
+
+
+    /*public class CoreCompetency
     {
         public int Id { get; set; }
         private static int nextId = 1;
@@ -40,6 +46,6 @@ namespace TechJobsOO
         {
             throw new NotImplementedException();
         }
-    }
+    }*/
     
 }

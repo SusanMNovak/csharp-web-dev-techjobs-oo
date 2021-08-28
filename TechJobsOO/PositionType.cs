@@ -1,9 +1,9 @@
 ﻿using System;
 namespace TechJobsOO
 {
-    public class PositionType
+    public class PositionType : JobField
     {
-        public int Id { get; }
+        /*public int Id { get; }
         private static int nextId = 1;
         public string Value { get; set; }
 
@@ -11,9 +11,10 @@ namespace TechJobsOO
         {
             Id = nextId;
             nextId++;
-        }
+        }*/
 
-        public PositionType(string value) : this()
+        public PositionType(string value) : base(value){ }
+        /*public PositionType(string value) : this()
         {
             Value = value;
         }
@@ -40,6 +41,6 @@ namespace TechJobsOO
         public static implicit operator PositionType(string v)
         {
             throw new NotImplementedException();
-        }
+        }*/
     }
 }
