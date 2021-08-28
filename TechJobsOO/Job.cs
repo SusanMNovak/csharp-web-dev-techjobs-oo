@@ -59,28 +59,28 @@ namespace TechJobsOO
             }
             if (EmployerName.Value == "" || EmployerName.Value == null)
             {
-                EmployerName = "Data not available.";
+                EmployerName.Value = "Data not available.";
             }
 
             if (EmployerLocation.Value == "" || EmployerLocation.Value == null)
             {
-                EmployerName = "Data not available.";
+                EmployerLocation.Value = "Data not available.";
             }
 
             if (JobType.Value == "" || JobType.Value == null)
             {
-                EmployerName = "Data not available.";
+                JobType.Value = "Data not available.";
             }
 
             if(JobCoreCompetency.Value == "" || JobCoreCompetency.Value == null);
             {
-                EmployerName = "Data not available.";
+                JobCoreCompetency.Value = "Data not available.";
             }
 
             string output =  "\n ID: " + Id + "\n Name: " + Name + "\n Employer: " + EmployerName.Value + "\nLocation: " + EmployerLocation.Value + "\n Position Type: "   + JobType.Value  + "\n Core Competency: " +  JobCoreCompetency.Value + "\n";
                 return output;
                 //Console.WriteLine(Job.ToString());
-            }
+            
         }
    
     }

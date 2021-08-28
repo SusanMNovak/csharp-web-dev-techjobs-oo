@@ -34,9 +34,5 @@ namespace TechJobsOO
             return Value;
         }
 
-        public static implicit operator Employer(string v)
-        {
-            throw new NotImplementedException();
-        }
-    }
+    }    
 }

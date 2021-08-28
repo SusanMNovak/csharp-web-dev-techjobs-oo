@@ -10,6 +10,7 @@ namespace TechJobsTests
         Job job2;
         Job job3;
         Job job4;
+        Job job5;
 
         [TestInitialize]
         public void CreateJobObjects()
@@ -18,6 +19,8 @@ namespace TechJobsTests
             job2 = new Job();
             job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency(""));
+
         }
 
         [TestMethod]
@@ -52,10 +55,10 @@ namespace TechJobsTests
         [TestMethod]
         public void TestToString()
         {
-            string output = " ID: " + job3.Id + "\n Name: " + job3.Name + "\n Employer: " + job3.EmployerName.Value + "\nLocation: " + job3.EmployerLocation.Value + "\n Position Type: " + job3.JobType.Value + "\n Core Competency: " + job3.JobCoreCompetency.Value + "\n";
+            string output = "\n ID: " + job5.Id + "\n Name: " + job5.Name + "\n Employer: " + job5.EmployerName.Value + "\nLocation: " + job5.EmployerLocation.Value + "\n Position Type: " + job5.JobType.Value + "\n Core Competency: " + job5.JobCoreCompetency.Value + "\n";
             Assert.IsTrue(output.EndsWith("\n"));
-            Assert.AreEqual(output, job3.ToString());
-            Assert.IsTrue(output.CoreCompetency.Value == "Data not available.");
+            Assert.AreEqual(output, job5.ToString());
+            Assert.IsTrue(job5.JobCoreCompetency.Value == "Data not available.");
             //Assert.IsTrue("Name: " + jobi.Name + \n + "Employer: " + jobi.EmployerName.Value + \n + "Location: " + "jobi.EmployerLocation.Value" + \n + " Position Type: " jobi.JobType.Value + \n + "Core Competency: " + "jobi.JobCoreCompetency.Value" + \n;)
         }   //Assert.IsNullOrEmpty(Job);
 
