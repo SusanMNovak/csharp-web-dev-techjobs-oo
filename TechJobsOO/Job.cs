@@ -77,9 +77,9 @@ namespace TechJobsOO
                 JobCoreCompetency.Value = "Data not available.";
             }
 
-            string output =  "\n ID: " + Id + "\n Name: " + Name + "\n Employer: " + EmployerName.Value + "\nLocation: " + EmployerLocation.Value + "\n Position Type: "   + JobType.Value  + "\n Core Competency: " +  JobCoreCompetency.Value + "\n";
+            string output =  "\n ID: " + Id + "\n Name: " + Name + "\n Employer: " + EmployerName.Value + "\n Location: " + EmployerLocation.Value + "\n Position Type: "   + JobType.Value  + "\n Core Competency: " +  JobCoreCompetency.Value + "\n";
                 return output;
-                //Console.WriteLine(Job.ToString());
+                
             
         }
    
